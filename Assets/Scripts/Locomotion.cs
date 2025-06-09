@@ -25,7 +25,14 @@ public class Locomotion : MonoBehaviour
         float zInput = Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime;
         transform.Translate(xInput, yInput, zInput);
 
+
+        while (Input.GetKeyDown(KeyCode.A))
+        {
+            Vector3 newRotation = new Vector3(0, 2, 0);
+            transform.eulerAngles = newRotation;
+        }
         
+
 
     }
 }

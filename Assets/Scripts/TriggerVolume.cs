@@ -18,12 +18,13 @@ public class TriggerVolume : MonoBehaviour
             }
             else if(projectileSalvo != null)
             {
-                foreach(Transform child in projectileSalvo.transform)
+                foreach (Transform child in projectileSalvo.transform)
                 {
                     child.gameObject.SetActive(true);
+                    Destroy(gameObject);
                 }
             }
-            
+
 
         }
         
